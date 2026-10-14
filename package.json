@@ -1,0 +1,35 @@
+{
+  "name": "docai",
+  "version": "0.1.0",
+  "main": "electron/main.cjs",
+  "scripts": {
+    "dev": "concurrently -k \"vite\" \"wait-on tcp:5199 && DOCAI_DEV_URL=http://localhost:5199 electron .\"",
+    "build": "tsc && vite build",
+    "start": "vite build && electron .",
+    "typecheck": "tsc",
+    "package": "npm run build && electron-packager . DocAi --platform=darwin --arch=arm64 --out=release --overwrite --prune=false --ignore=\"^/(src|node_modules|\\.exec|\\.github|release|public|tsconfig.*|vite\\.config.*|index\\.html|\\.recon.*)\" --app-bundle-id=au.com.facilitated.docai --icon=electron/docai.icns",
+    "test": "node --test --test-concurrency=2 tests/smoke/*.test.mjs"
+  },
+  "type": "module",
+  "dependencies": {
+    "@getpaseo/client": "0.10.3",
+    "@xterm/addon-fit": "^0.11.0",
+    "@xterm/xterm": "^6.0.0",
+    "material-symbols": "^0.48.0",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "streamdown": "^2.7.0"
+  },
+  "devDependencies": {
+    "@electron/packager": "^20.3.0",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.1.2",
+    "concurrently": "^10.0.6",
+    "electron": "^44.7.0",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.4",
+    "wait-on": "^9.5.1"
+  },
+  "private": true
+}

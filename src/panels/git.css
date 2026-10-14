@@ -1,0 +1,40 @@
+.git-panel { padding: 16px; overflow-y: auto; min-height: 0; height: 100%; color: var(--docs-text); font: 14px/1.45 var(--docs-ui-font); }
+.git-panel .panel-header { display: flex; justify-content: space-between; align-items: center; gap: 8px; margin-bottom: 12px; }
+.git-panel h2 { font-size: 18px; font-weight: 500; margin: 0; }
+.git-panel h3 { font-size: 14px; font-weight: 500; margin: 0 0 8px; }
+.git-panel .panel-section { padding: 14px 0; border-top: 1px solid var(--docs-page-border); }
+.git-panel .panel-row, .git-confirm .panel-row { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin: 8px 0; }
+.git-panel .panel-row > span { flex: 1; min-width: 0; overflow-wrap: anywhere; }
+.git-panel .panel-btn, .git-confirm .panel-btn { border: 1px solid var(--docs-divider); background: var(--docs-paper); color: var(--docs-selected-ink); border-radius: 20px; padding: 7px 12px; min-height: 32px; cursor: pointer; font: 500 12px/1.4 var(--docs-ui-font); }
+.git-panel .panel-btn:hover, .git-confirm .panel-btn:hover { background: var(--docs-hover); }
+.git-panel .panel-btn.primary, .git-confirm .panel-btn.primary { border-color: transparent; background: var(--docs-selected); }
+.git-panel .panel-btn.danger { color: #b3261e; }
+.git-panel button:disabled { opacity: .45; cursor: default; }
+.git-panel :is(button, input, textarea, select, summary):focus-visible, .git-confirm button:focus-visible { outline: 2px solid var(--docs-focus); outline-offset: 2px; }
+.git-panel .panel-input { display: block; width: 100%; border: 1px solid var(--docs-divider); background: var(--docs-paper); color: var(--docs-text); border-radius: 6px; padding: 9px; font: inherit; margin-top: 5px; }
+.git-panel textarea.panel-input { resize: vertical; min-height: 70px; }
+.git-panel .panel-empty { color: var(--docs-muted); padding: 12px 0; font-size: 13px; }
+.git-panel .panel-error { border-radius: 8px; background: #fce8e6; color: #b3261e; padding: 12px; margin: 10px 0; overflow-wrap: anywhere; }
+.git-panel .panel-error button { margin: 8px 0 0 8px; }
+.git-muted, .git-path { font-size: 12px; color: var(--docs-muted); margin: 5px 0 10px; }
+.git-path { overflow-wrap: anywhere; }
+.git-label { display: block; font-size: 12px; color: var(--docs-muted); margin: 12px 0; }
+.git-panel summary { cursor: pointer; padding: 6px 0; overflow-wrap: anywhere; }
+.git-file { margin: 8px 0; border-bottom: 1px solid var(--docs-page-border); padding-bottom: 8px; }
+.git-count { color: var(--docs-muted); font-size: 11px; margin-left: 8px; white-space: nowrap; }
+.git-diff { overflow-x: auto; max-height: 420px; background: var(--docs-bg); margin: 8px 0; border-radius: 4px; }
+.git-diff pre { margin: 0; font: 11px/1.7 Menlo, Consolas, monospace; }
+.git-line, .git-hunk { display: block; padding: 0 6px; min-height: 18px; width: max-content; min-width: 100%; }
+.git-hunk { color: var(--docs-muted); background: var(--docs-toolbar); }
+.git-tree-entry { display: flex; align-items: center; gap: 6px; width: 100%; border: 0; background: transparent; text-align: left; border-radius: 16px; padding: 7px 8px; font: 13px var(--docs-ui-font); cursor: pointer; overflow-wrap: anywhere; }
+.git-tree-entry:hover { background: var(--docs-hover); }
+.git-tree-entry.selected { background: var(--docs-selected); }
+.git-tree-entry .material-symbols-outlined { flex-shrink: 0; font-size: 18px; }
+.files-editor { display: block; width: 100%; min-height: 280px; resize: vertical; border: 1px solid var(--docs-divider); border-radius: 6px; margin-top: 8px; padding: 10px; color: var(--docs-text); background: var(--docs-paper); font: 12px/1.6 Menlo, Consolas, monospace; tab-size: 2; white-space: pre; }
+.term-screen { height: 340px; min-width: 0; overflow: hidden; background: var(--docs-paper); padding: 5px; border: 1px solid var(--docs-page-border); border-radius: 6px; }
+.term-script { display: flex; gap: 8px; justify-content: space-between; align-items: center; padding: 8px 0; }
+.term-script small { display: block; }
+.git-confirm { border: 1px solid var(--docs-divider); border-radius: 20px; padding: 24px; width: min(420px, calc(100vw - 40px)); color: var(--docs-text); background: var(--docs-paper); font: 14px/1.5 var(--docs-ui-font); box-shadow: 0 8px 32px #0003; overflow-wrap: anywhere; }
+.git-confirm::backdrop { background: #0005; }
+.git-confirm h3 { font-size: 20px; font-weight: 400; margin-top: 0; }
+.git-confirm .panel-row { justify-content: flex-end; margin-bottom: 0; }

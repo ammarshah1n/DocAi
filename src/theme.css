@@ -1,0 +1,48 @@
+/* Google Docs design tokens. Components use only these variables. */
+:root {
+  --docs-bg: #f8fafd;
+  --docs-toolbar: #f0f4f9;
+  --docs-paper: #ffffff;
+  --docs-text: #1f1f1f;
+  --docs-icon: #444746;
+  --docs-muted: #5f6368;
+  --docs-divider: #c4c7c5;
+  --docs-page-border: #dadce0;
+  --docs-selected: #d3e3fd;
+  --docs-selected-ink: #0b57d0;
+  --docs-share: #c2e7ff;
+  --docs-share-ink: #001d35;
+  --docs-focus: #0b57d0;
+  --docs-hover: rgb(68 71 70 / 8%);
+  --docs-pressed: rgb(68 71 70 / 12%);
+  --docs-ui-font: "Google Sans", "Google Sans Text", Roboto, Arial, sans-serif;
+  --docs-body-font: Arial, sans-serif;
+  --docs-body-size: 11pt;
+  --docs-toolbar-h: 40px;
+  --docs-toolbar-radius: 28px;
+  --docs-tool-hit: 30px;
+  --docs-ruler-h: 24px;
+  --docs-tabs-w: 280px;
+  --docs-rail-w: 56px;
+  --docs-panel-w: 360px;
+  --docs-page-w: 816px;
+  --docs-page-h: 1056px;
+  --docs-page-margin: 96px;
+  --docs-page-gap: 20px;
+  --docs-page-shadow: 0 0 0 0.75pt #dadce0, 0 1px 3px 1px rgb(60 64 67 / 15%);
+}
+
+* { box-sizing: border-box; }
+html, body, #root { height: 100%; margin: 0; }
+body { background: var(--docs-bg); color: var(--docs-text); font-family: var(--docs-ui-font); font-size: 14px; overflow: hidden; -webkit-font-smoothing: antialiased; }
+button { font: inherit; color: inherit; }
+.material-symbols-outlined { font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 20; font-size: 20px; color: var(--docs-icon); }
+
+.app { display: flex; flex-direction: column; height: 100%; }
+.app-header { -webkit-app-region: drag; padding-left: 80px; }
+.app-header button, .app-header input, .app-header [role^="menuitem"] { -webkit-app-region: no-drag; }
+.app-body { flex: 1; display: flex; min-height: 0; }
+.app-main { flex: 1; min-width: 0; display: flex; }
+
+.crash { margin: 24px; padding: 16px; background: #fce8e6; color: #b3261e; border-radius: 8px; }
+.crash button { margin-top: 8px; }

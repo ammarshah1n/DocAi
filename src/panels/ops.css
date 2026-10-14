@@ -1,0 +1,47 @@
+.ops-panel { padding: 0 16px 24px; overflow-y: auto; height: 100%; font-size: 13px; color: var(--docs-text); }
+.ops-panel .panel-header { display: flex; align-items: center; gap: 4px; min-height: 64px; position: sticky; top: 0; background: var(--docs-paper); z-index: 1; }
+.ops-panel .panel-header h2 { font-size: 16px; font-weight: 500; flex: 1; margin: 0; }
+.ops-panel .ops-icon { display: grid; place-items: center; width: 32px; height: 32px; border: 0; background: transparent; border-radius: 50%; cursor: pointer; }
+.ops-panel .ops-icon:hover { background: var(--docs-hover); }
+.ops-panel .ops-controls { padding: 0; margin: 0; border: 0; min-width: 0; }
+.ops-panel .panel-section { padding: 16px 0; border-bottom: 1px solid var(--docs-page-border); }
+.ops-panel h3 { margin: 0 0 12px; font-size: 14px; font-weight: 500; }
+.ops-panel label { display: flex; flex-direction: column; gap: 6px; font-size: 12px; color: var(--docs-muted); margin: 12px 0; }
+.ops-panel .panel-input { border: 1px solid var(--docs-divider); background: var(--docs-paper); border-radius: 4px; padding: 9px 10px; color: var(--docs-text); width: 100%; min-width: 0; font: inherit; font-size: 13px; }
+.ops-panel textarea { resize: vertical; min-height: 90px; line-height: 1.5; }
+.ops-panel input[type=file] { max-width: 100%; }
+.ops-panel :is(button, input, select, textarea, summary):focus-visible { outline: 2px solid var(--docs-focus); outline-offset: 2px; }
+.ops-panel .panel-row { display: flex; align-items: center; flex-wrap: wrap; gap: 8px; margin: 10px 0; }
+.ops-panel .panel-btn { display: inline-flex; align-items: center; justify-content: center; gap: 6px; min-height: 34px; padding: 7px 12px; border: 1px solid var(--docs-divider); border-radius: 18px; color: var(--docs-selected-ink); background: transparent; font-size: 12px; cursor: pointer; }
+.ops-panel .panel-btn:hover { background: var(--docs-hover); }
+.ops-panel .panel-btn.primary { border-color: transparent; background: var(--docs-selected); }
+.ops-panel .panel-btn.primary:hover { background: var(--docs-share); }
+.ops-panel .danger { color: #b3261e; }
+.ops-panel :disabled { cursor: default; opacity: .55; }
+.ops-panel .ops-new { margin: 8px 0 16px; }
+.ops-panel .ops-card { padding: 14px 0; border-bottom: 1px solid var(--docs-page-border); overflow-wrap: anywhere; }
+.ops-panel .ops-heading { display: flex; align-items: center; gap: 8px; }
+.ops-panel .ops-heading :is(h3, strong) { flex: 1; min-width: 0; font-weight: 500; margin: 0; }
+.ops-panel .ops-status { color: var(--docs-muted); font-size: 11px; text-transform: capitalize; }
+.ops-panel .ops-project-icon { width: 24px; height: 24px; object-fit: contain; }
+.ops-panel :is(.ops-path, .ops-note, .panel-empty) { color: var(--docs-muted); font-size: 12px; line-height: 1.6; overflow-wrap: anywhere; }
+.ops-panel .ops-path { margin: 8px 0 12px; }
+.ops-panel .ops-prompt { line-height: 1.55; white-space: pre-wrap; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+.ops-panel .ops-next { color: var(--docs-selected-ink); font-size: 12px; }
+.ops-panel details { margin-top: 12px; }
+.ops-panel summary { cursor: pointer; color: var(--docs-muted); padding: 8px 0; font-size: 12px; }
+.ops-panel .ops-chip { border: 0; border-radius: 12px; background: var(--docs-toolbar); padding: 5px 9px; cursor: pointer; }
+.ops-panel .ops-repo { display: block; width: 100%; text-align: left; padding: 10px; border: 0; background: transparent; cursor: pointer; overflow-wrap: anywhere; }
+.ops-panel .ops-repo:hover { background: var(--docs-hover); }
+.ops-panel .ops-repo small { display: block; color: var(--docs-muted); margin-top: 4px; }
+.ops-panel .panel-error { padding: 12px; border-radius: 8px; background: #fce8e6; color: #b3261e; overflow-wrap: anywhere; line-height: 1.5; }
+.ops-panel .panel-error p { font-size: 12px; }
+.ops-panel .ops-progress { font-size: 12px; padding: 8px; background: var(--docs-toolbar); border-radius: 4px; color: var(--docs-muted); }
+.ops-panel .ops-empty { text-align: center; padding: 48px 16px; color: var(--docs-muted); line-height: 1.6; }
+.ops-panel .ops-empty > .material-symbols-outlined { font-size: 36px; color: var(--docs-selected-ink); background: var(--docs-toolbar); border-radius: 50%; padding: 16px; margin-bottom: 20px; }
+.ops-panel .ops-empty h3 { color: var(--docs-text); }
+.ops-panel .ops-info { font-size: 12px; line-height: 1.6; }
+.ops-panel .ops-info dt { color: var(--docs-muted); margin-top: 8px; }
+.ops-panel .ops-info dd { margin-left: 0; white-space: pre-wrap; overflow-wrap: anywhere; }
+.ops-panel .ops-log { padding: 12px 0; border-top: 1px solid var(--docs-page-border); }
+.ops-panel .ops-log pre { white-space: pre-wrap; overflow-wrap: anywhere; max-height: 240px; overflow: auto; font-size: 11px; background: var(--docs-bg); padding: 8px; }

@@ -1,0 +1,57 @@
+.sidebar { width: var(--docs-tabs-w); flex: 0 0 var(--docs-tabs-w); display: flex; flex-direction: column; min-height: 0; padding: 16px 12px 12px; background: var(--docs-bg); font-size: 14px; }
+.sidebar button, .sidebar-show { border: 0; background: transparent; cursor: pointer; }
+.sidebar button:disabled { cursor: default; opacity: .5; }
+.sidebar button:focus-visible, .sidebar input:focus-visible, .sidebar-show:focus-visible { outline: 2px solid var(--docs-focus); outline-offset: -2px; }
+.sidebar-header { display: flex; align-items: center; gap: 2px; padding-left: 12px; min-height: 40px; margin-bottom: 10px; }
+.sidebar-header h2 { font-size: 14px; font-weight: 500; margin: 0; flex: 1; }
+.sidebar-icon { display: inline-flex; align-items: center; justify-content: center; flex: 0 0 32px; width: 32px; height: 32px; border-radius: 50%; padding: 0; }
+.sidebar .sidebar-icon:hover, .sidebar-show:hover { background: var(--docs-hover); }
+.sidebar-show { position: absolute; z-index: 3; margin: 16px; width: 40px; height: 40px; background: var(--docs-bg); }
+.sidebar-search { display: flex; align-items: center; gap: 8px; border-radius: 24px; margin: 0 4px 12px; padding: 8px 12px; background: var(--docs-toolbar); }
+.sidebar-search input { font: inherit; font-size: 13px; border: 0; width: 100%; min-width: 0; background: transparent; color: var(--docs-text); outline: none; }
+.sidebar-search:focus-within { box-shadow: inset 0 0 0 2px var(--docs-focus); }
+.sidebar-search input::placeholder { color: var(--docs-muted); }
+.sidebar-scroll { overflow: auto; min-height: 0; flex: 1; scrollbar-width: thin; scrollbar-color: var(--docs-divider) transparent; padding-bottom: 6px; }
+.sidebar-group { margin: 0 0 8px; }
+.sidebar-group-toggle { width: 100%; display: flex; align-items: center; gap: 4px; min-height: 32px; border-radius: 16px; padding: 4px 8px; font-size: 12px; font-weight: 500; color: var(--docs-muted); text-align: left; }
+.sidebar-group-toggle:hover { background: var(--docs-hover); }
+.sidebar-group-toggle > span:not(.material-symbols-outlined):not(.sidebar-count) { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.sidebar-group-toggle .material-symbols-outlined { flex: 0 0 18px; font-size: 18px; }
+.sidebar-count { margin-left: auto; padding-left: 4px; font-size: 11px; font-weight: 400; }
+.sidebar-document { position: relative; }
+.sidebar-row { display: flex; align-items: center; min-height: 40px; border-radius: 22px; padding-right: 3px; }
+.sidebar-row:hover { background: var(--docs-hover); }
+.sidebar-row.is-selected, .sidebar-row.is-selected:hover { background: var(--docs-selected); }
+.sidebar-open { display: flex; align-items: center; gap: 10px; min-width: 0; flex: 1; padding: 9px 0 9px 15px; text-align: left; border-radius: 22px; height: 38px; }
+.sidebar-open > .material-symbols-outlined { flex: 0 0 20px; }
+.sidebar-title { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 13px; line-height: 20px; }
+.sidebar-pin-icon { display: inline-flex; flex: 0 0 14px; margin-left: -6px; color: var(--docs-selected-ink); }
+.sidebar-pin-icon .material-symbols-outlined { font-size: 15px; }
+.is-selected .sidebar-open, .is-selected .sidebar-open > .material-symbols-outlined { color: var(--docs-selected-ink); }
+.is-selected .sidebar-title { font-weight: 500; }
+.sidebar-more { opacity: 0; flex-basis: 28px; width: 28px; height: 28px; margin-left: 2px; }
+.sidebar-row:hover .sidebar-more, .sidebar-row:focus-within .sidebar-more, .sidebar-more.is-open { opacity: 1; }
+.sidebar-status { width: 7px; height: 7px; flex: 0 0 7px; border-radius: 50%; margin-left: auto; }
+.sidebar-status.running { background: #188038; }
+.sidebar-status.attention { background: var(--docs-selected-ink); }
+.sidebar-status.permission { background: #b06000; }
+.sidebar-pane { font-size: 10px; flex: 0 0 17px; line-height: 17px; text-align: center; border-radius: 50%; background: var(--docs-toolbar); color: var(--docs-muted); margin-left: auto; }
+.sidebar-outline { margin: 5px 14px 12px 25px; padding-left: 16px; border-left: 1px solid var(--docs-divider); }
+.sidebar-prompt { display: block; width: 100%; text-align: left; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 12px; line-height: 20px; color: var(--docs-muted); padding: 6px 8px; border-radius: 4px; }
+.sidebar-prompt:hover { color: var(--docs-selected-ink); background: var(--docs-hover); }
+.sidebar-hint { font-size: 12px; line-height: 18px; color: var(--docs-muted); padding: 6px 12px; margin: 0; }
+.sidebar-outline .sidebar-hint { padding-left: 8px; }
+.sidebar-menu { position: relative; z-index: 4; margin: 3px 3px 8px 8px; background: var(--docs-paper); border-radius: 8px; padding: 6px 0; box-shadow: 0 2px 6px rgb(60 64 67 / 25%); }
+.sidebar-menu > button { display: flex; gap: 10px; align-items: center; width: 100%; min-height: 36px; text-align: left; font-size: 13px; padding: 6px 12px; }
+.sidebar-menu > button:hover:not(:disabled) { background: var(--docs-hover); }
+.sidebar-rename { display: flex; align-items: center; min-width: 0; padding-left: 12px; flex: 1; }
+.sidebar-rename input { width: 100%; min-width: 0; font: inherit; font-size: 13px; border: 1px solid var(--docs-focus); border-radius: 3px; background: var(--docs-paper); padding: 4px; }
+.sidebar-confirm { margin: 6px; padding: 12px; border: 1px solid var(--docs-divider); background: var(--docs-paper); border-radius: 12px; font-size: 12px; line-height: 18px; }
+.sidebar-confirm p { margin: 0 0 10px; }
+.sidebar-confirm > div { display: flex; justify-content: flex-end; gap: 4px; }
+.sidebar-confirm button, .sidebar-error button, .sidebar-load { color: var(--docs-selected-ink); border-radius: 20px; padding: 6px 8px; }
+.sidebar-confirm button:hover, .sidebar-error button:hover, .sidebar-load:hover { background: var(--docs-hover); }
+.sidebar-error { padding: 8px 12px; font-size: 12px; line-height: 18px; color: #b3261e; overflow-wrap: anywhere; }
+.sidebar-load { display: block; margin: 4px auto; font-size: 12px; }
+.sidebar-sentinel { height: 1px; }
+@media (hover: none) { .sidebar-more { opacity: 1; } }
