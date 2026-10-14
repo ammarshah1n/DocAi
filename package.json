@@ -7,7 +7,7 @@
     "build": "tsc && vite build",
     "start": "vite build && electron .",
     "typecheck": "tsc",
-    "package": "npm run build && electron-packager . DocAi --platform=darwin --arch=arm64 --out=release --overwrite --prune=false --ignore=\"^/(src|node_modules|\\.exec|\\.github|release|public|tsconfig.*|vite\\.config.*|index\\.html|\\.recon.*)\" --app-bundle-id=au.com.facilitated.docai --icon=electron/docai.icns",
+    "package": "npm run build && electron-packager . DocAi --platform=darwin --arch=arm64 --out=release --overwrite --prune=false --ignore=\"^/(AGENTS\\.md|CLAUDE\\.md|PLAN\\.md|\\.pi|\\.claude|\\.env|\\.npmrc|src|node_modules|\\.exec|\\.github|release|public|tsconfig.*|vite\\.config.*|index\\.html|\\.recon.*)\" --app-bundle-id=au.com.facilitated.docai --icon=electron/docai.icns",
     "test": "node --test --test-concurrency=2 tests/smoke/*.test.mjs"
   },
   "type": "module",
